@@ -1,4 +1,5 @@
 # vs-code-zshrc-settings
+### will edit later
 ```
 #VS-CODE SETTINGS# 
 {
@@ -10,21 +11,23 @@
     "workbench.colorTheme": "One Dark Pro Vivid",
     "workbench.fontAliasing": "antialiased",
     "editor.renderWhitespace": "all",
+    "editor.renderLineHighlight": "all",
     "editor.tabSize": 2,
     "editor.cursorBlinking": "solid",
     "extensions.ignoreRecommendations": false,
     // Controls the font size in pixels.
-    "editor.fontSize": 12,
+    "editor.fontSize": 14,
     // Controls the font family.
     "editor.fontFamily": "Fira Code, Roboto Mono, Menlo, Inconsolata",
     "editor.fontLigatures": true,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
+    "files.trimTrailingWhitespace": true,
     // The path of the shell that the terminal uses on Linux.
     "terminal.integrated.shell.osx": "/bin/zsh",
     // Controls the font family of the terminal, this defaults to editor.fontFamily's value.
     "terminal.integrated.fontFamily": "Inconsolata for Powerline",
     "workbench.startupEditor": "newUntitledFile",
-    "editor.renderIndentGuides": false,
+    "editor.renderIndentGuides": true,
     "window.openFilesInNewWindow": "on",
     "window.openFoldersInNewWindow": "on"
 }
