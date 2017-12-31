@@ -1,5 +1,5 @@
-# vs-code-zsh-settings
-
+# vs-code-zshrc-settings
+```
 #VS-CODE SETTINGS# 
 {
     "editor.matchBrackets": false,
@@ -122,3 +122,4 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 #POWERLEVEL9K_DISABLE_RPROMPT=true
 # Gets rid of cl@ckl on each command
 DEFAULT_USER=`whoami`
+```
