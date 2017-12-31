@@ -1,5 +1,5 @@
 # vs-code-zshrc-settings
-### will edit later
+### will organize later
 ```
 #VS-CODE SETTINGS# 
 {
