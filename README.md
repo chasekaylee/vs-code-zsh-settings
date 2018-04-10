@@ -374,18 +374,22 @@
 }
 
 
-#~./zshrc PROFILE#
-
-# If you come from bash you might have to change your $PATH.
+#If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# GO
+export GOPATH="$HOME/dev/go"
+export GOBIN="$HOME/dev/go/bin"
+export GOROOT="/usr/local/go"
+export PATH=$GOPATH/bin:$PATH
+
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/chasekaylee/.oh-my-zsh
+export ZSH=/Users/chasekaylee/.oh-my-zsh/
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_MODE='nerdfont-complete'
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Set list of themes to load
@@ -445,13 +449,17 @@ alias S='source ~/.zshrc'
 alias IP='ifconfig -a | grep broadcast'
 alias WHO='arp -a'
 alias a='pwd'
-alias ls='ls -GFh'
+alias ls='ls -GFh -a'
 alias c='clear'
 alias computer='uname -a'
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias gitconfig='nano ~/.gitconfig'
 alias sshconfig='nano .ssh/config'
-alias dev='cd /Users/chasekaylee/Documents/dev/github/chasekaylee/hackreactor'
+alias dev='cd /Users/chasekaylee/dev'
+alias gitgo='/Users/chasekaylee/dev/go/src/github.com'
+alias gogo='/Users/chasekaylee/dev/go'
+alias gbr='git branch | grep -v "master" | xargs git branch -D'
+
 
 ## VS CODE ##
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
@@ -466,4 +474,14 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 #POWERLEVEL9K_DISABLE_RPROMPT=true
 # Gets rid of cl@ckl on each command
 DEFAULT_USER=`whoami`
+
+source  ~/powerlevel9k/powerlevel9k.zsh-theme
+source  ~/powerlevel9k/powerlevel9k.zsh-theme
+
+# added by travis gem
+[ -f /Users/chasekaylee/.travis/travis.sh ] && source /Users/chasekaylee/.travis/travis.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 ```
